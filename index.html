@@ -17,9 +17,10 @@
     box-sizing: border-box;
   }
 
-  html, body {
-    height: 100%;
-  }
+  /* 
+    Removed html, body { height: 100%; } 
+    so the page is allowed to grow and become scrollable.
+  */
 
   body {
     margin: 0;
@@ -27,13 +28,14 @@
     color: var(--ink);
     font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
     display: flex;
-    align-items: center;
-    justify-content: center;
     min-height: 100vh;
-    padding: 40px 24px;
+    /* Increased padding from 40px to 80px for much more top/bottom margin buffer */
+    padding: 80px 24px; 
   }
 
   main {
+    /* margin: auto perfectly centers the content safely without cutting off the top */
+    margin: auto; 
     max-width: 520px;
     width: 100%;
     text-align: center;
