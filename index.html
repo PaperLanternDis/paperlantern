@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Paper Lantern</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+  :root {
+    --paper: #f9f8eb;
+    --ink: #1a1a1a;
+    --link: #C76E00;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: 'PT Serif', Georgia, 'Times New Roman', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 40px 24px;
+  }
+
+  main {
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo {
+    width: 220px;
+    height: auto;
+    margin-bottom: 28px;
+  }
+
+  p.description {
+    font-size: 1.1rem;
+    line-height: 1.65;
+    margin: 0 0 40px;
+  }
+
+  .donate {
+    margin-bottom: 44px;
+  }
+
+  .donate img {
+    display: block;
+    margin: 0 auto 14px;
+  }
+
+  a {
+    color: var(--link);
+    text-decoration: none;
+    border-bottom: 1px solid var(--link);
+  }
+
+  a:hover,
+  a:focus {
+    opacity: 0.8;
+  }
+
+  .kofi-embed {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 44px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  form p.label {
+    font-size: 0.95rem;
+    margin: 0 0 4px;
+  }
+
+  input[type="email"] {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 1px solid var(--ink);
+    background-color: var(--paper);
+    color: var(--ink);
+    border-radius: 2px;
+  }
+
+  input[type="email"]:focus {
+    outline: 2px solid var(--link);
+    outline-offset: 2px;
+  }
+
+  button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    background-color: var(--ink);
+    color: var(--paper);
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    cursor: pointer;
+  }
+
+  button:hover,
+  button:focus {
+    background-color: var(--link);
+    border-color: var(--link);
+  }
+
+  .confirmation {
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <img class="logo" src="images/paper-lantern.png" alt="The Paper Lantern">
+
+    <p class="description">
+      A lot of radical literature exists in this world. The Paper Lantern is a donation-based project to print and distribute as much of this as we can. Scan the QR code to make a donation, receive a monthly publication, or join a reading group.
+    </p>
+
+    <div class="donate">
+      <a href="https://ko-fi.com/paperlantern" target="_blank" rel="noopener">
+        <img src="images/qr-kofi.png" width="180" height="180" alt="QR code linking to Ko-fi donation page">
+      </a>
+      <a href="https://ko-fi.com/paperlantern" target="_blank" rel="noopener">Make a donation</a>
+    </div>
+
+    <div class="kofi-embed">
+      <iframe id="kofiframe" src="https://ko-fi.com/paperlantern/?hidefeed=true&widget=true&embed=true&preview=true" style="border:none;width:100%;padding:0;background:transparent;" height="600" title="Support The Paper Lantern on Ko-fi" loading="lazy"></iframe>
+    </div>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <p class="label">Join the mailing list</p>
+      <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+      <button type="submit">Sign up</button>
+    </form>
+  </main>
+</body>
+</html>
